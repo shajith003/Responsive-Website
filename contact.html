@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(45deg, #333, #555);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #f0a500;
+        }
+
+        /* Search Bar */
+        .search-container {
+            display: flex;
+            align-items: center;
+            background-color: #444;
+            padding: 5px 15px;
+            border-radius: 25px;
+        }
+
+        .search-container input {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            padding: 8px 12px;
+            border-radius: 20px;
+            width: 200px;
+            transition: width 0.3s ease;
+        }
+
+        .search-container input:focus {
+            width: 250px;
+        }
+
+        /* Contact Section */
+        .contact {
+            margin: 100px auto 40px;
+            max-width: 600px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .contact h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        .contact form label {
+            display: block;
+            font-size: 1.2rem;
+            margin: 10px 0 5px;
+        }
+
+        .contact form input, 
+        .contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact form input:focus, 
+        .contact form textarea:focus {
+            border-color: #f0a500;
+            box-shadow: 0 0 8px rgba(240, 165, 0, 0.5);
+        }
+
+        .contact form button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            background: linear-gradient(45deg, #f0a500, #ffcc66);
+            color: white;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .contact form button:hover {
+            background: linear-gradient(45deg, #d48806, #e6b800);
+            transform: translateY(-3px);
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            background-color: #28a745;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(45deg, #333, #555);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+                padding: 15px 20px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .search-container input {
+                width: 150px;
+            }
+
+            .contact {
+                margin: 80px 20px 40px;
+                padding: 20px;
+            }
+
+            .contact h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header style="position: fixed; top: 0; left: 0; width: 100%; padding: 15px 40px; background-color: #333; z-index: 1000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.3s ease;">
+        <nav style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="color: #fff; font-size: 2rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">
+                VTS
+            </div>
+            <ul style="list-style: none; display: flex; gap: 20px;">
+                <li style="position: relative;">
+                    <a href="index.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">Home</a>
+                </li>
+                <li style="position: relative;">
+                    <a href="about.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">About</a>
+                </li>
+                <li style="position: relative;">
+                    <a href="services.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">Services</a>
+                </li>
+                <li style="position: relative;">
+                    <a href="blog.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">Blog</a>
+                </li>
+                <li style="position: relative;">
+                    <a href="contact.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">Contact</a>
+                </li>
+                <li class="dropdown" style="position: relative;">
+                    <a href="#" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">More</a>
+                    <div style="display: none; position: absolute; top: 100%; left: 0; background-color: #333; min-width: 160px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); z-index: 10;">
+                        <a href="#" style="color: white; padding: 12px 16px; text-decoration: none; display: block; font-size: 1rem; transition: background-color 0.3s ease;">FAQ</a>
+                        <a href="#" style="color: white; padding: 12px 16px; text-decoration: none; display: block; font-size: 1rem; transition: background-color 0.3s ease;">Privacy Policy</a>
+                        <a href="#" style="color: white; padding: 12px 16px; text-decoration: none; display: block; font-size: 1rem; transition: background-color 0.3s ease;">Terms of Service</a>
+                    </div>
+                </li>
+            </ul>
+            <div style="display: flex; align-items: center; background-color: #444; padding: 5px 15px; border-radius: 25px;">
+                <input type="text" placeholder="Search..." style="background: none; border: none; color: white; font-size: 1rem; outline: none; padding: 8px 12px; border-radius: 20px; width: 200px; transition: width 0.3s ease;">
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h1>Contact Us</h1>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" rows="5" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+
+        <!-- Success Message -->
+        <div class="success-message" id="successMessage">Your message has been successfully submitted!<br> We will get back to you shortly.</div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 VTS. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent form submission to server
+            document.getElementById('successMessage').style.display = 'block';  // Show success message
+        });
+    </script>
+</body>
+</html>

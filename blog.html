@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTS Blog</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(45deg, #333, #555);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #f0a500;
+        }
+
+        /* Blog Section */
+        .blog-section {
+            max-width: 1200px;
+            margin: 100px auto 50px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .blog-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .blog-section h1::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background-color: #009688;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+        }
+
+        .blog-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .blog-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+        }
+
+        .blog-card h2 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .blog-card p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .blog-card a {
+            display: inline-block;
+            background: #009688;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .blog-card a:hover {
+            background: #00796b;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(45deg, #333, #555);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .blog-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header style="position: fixed; top: 0; left: 0; width: 100%; padding: 15px 40px; background-color: #333; z-index: 1000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.3s ease;">
+        <nav style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="color: #fff; font-size: 2rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">
+                VTS
+            </div>
+            <ul style="list-style: none; display: flex; gap: 20px;">
+                <li style="position: relative;">
+                    <a href="index.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">Home</a>
+                </li>
+                <li style="position: relative;">
+                    <a href="about.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">About</a>
+                </li>
+                <li style="position: relative;">
+                    <a href="services.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">Services</a>
+                </li>
+                <li style="position: relative;">
+                    <a href="blog.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">Blog</a>
+                </li>
+                <li style="position: relative;">
+                    <a href="contact.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">Contact</a>
+                </li>
+                <li class="dropdown" style="position: relative;">
+                    <a href="#" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">More</a>
+                    <div style="display: none; position: absolute; top: 100%; left: 0; background-color: #333; min-width: 160px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); z-index: 10;">
+                        <a href="#" style="color: white; padding: 12px 16px; text-decoration: none; display: block; font-size: 1rem; transition: background-color 0.3s ease;">FAQ</a>
+                        <a href="#" style="color: white; padding: 12px 16px; text-decoration: none; display: block; font-size: 1rem; transition: background-color 0.3s ease;">Privacy Policy</a>
+                        <a href="#" style="color: white; padding: 12px 16px; text-decoration: none; display: block; font-size: 1rem; transition: background-color 0.3s ease;">Terms of Service</a>
+                    </div>
+                </li>
+            </ul>
+            <div style="display: flex; align-items: center; background-color: #444; padding: 5px 15px; border-radius: 25px;">
+                <input type="text" placeholder="Search..." style="background: none; border: none; color: white; font-size: 1rem; outline: none; padding: 8px 12px; border-radius: 20px; width: 200px; transition: width 0.3s ease;">
+            </div>
+        </nav>
+    </header>
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <h1>Our Latest Blog Posts</h1>
+        <div class="blog-container">
+            <div class="blog-card">
+                <h2>Latest Trends in Software Development</h2>
+                <p>Discover the latest technologies shaping the future of software development.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h2>AI & Machine Learning in 2025</h2>
+                <p>Explore how AI is transforming industries and what to expect in the future.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h2>Cybersecurity: Best Practices</h2>
+                <p>Learn how to protect your digital assets from cyber threats.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h2>Cloud Computing Revolution</h2>
+                <p>Understand how cloud computing is reshaping businesses worldwide.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h2>Web Development in 2025</h2>
+                <p>Check out the latest tools and frameworks redefining web development.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h2>Blockchain & Its Future</h2>
+                <p>Find out how blockchain technology is revolutionizing multiple industries.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h2>5G and the Future of Connectivity</h2>
+                <p>Explore how 5G is changing the way we connect and communicate.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h2>Data Science & Analytics</h2>
+                <p>Learn why data-driven decision-making is critical in today’s business world.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h2>Ethical AI & Responsible Tech</h2>
+                <p>Understand the importance of ethical considerations in AI development.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h2>Augmented & Virtual Reality</h2>
+                <p>Discover how AR & VR are shaping the future of entertainment and business.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 VTS. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

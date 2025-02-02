@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About VTS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(45deg, #333, #555);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #f0a500;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #444;
+            padding: 5px 15px;
+            border-radius: 25px;
+        }
+
+        .search-bar input[type="text"] {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            padding: 8px 12px;
+            border-radius: 20px;
+            width: 200px;
+            transition: width 0.3s ease;
+        }
+
+        .header-section {
+            text-align: center;
+            padding: 150px 20px 50px;
+        }
+
+        .header-section h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .header-section p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .about-container, .values-section, .team-section, .contact-section {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-container img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .about-container p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .values-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .values-section li {
+            background: #f0f0f0;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .team-section .team-member {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .team-section .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .team-section .team-member div {
+            font-size: 1.1rem;
+        }
+
+        .contact-section p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            background: linear-gradient(45deg, #333, #555);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header style="position: fixed; top: 0; left: 0; width: 100%; padding: 15px 40px; background-color: #333; z-index: 1000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.3s ease;">
+        <nav style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="color: #fff; font-size: 2rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">
+                VTS
+            </div>
+            <ul style="list-style: none; display: flex; gap: 20px;">
+                <li style="position: relative;">
+                    <a href="index.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">Home</a>
+                </li>
+                <li style="position: relative;">
+                    <a href="about.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">About</a>
+                </li>
+                <li style="position: relative;">
+                    <a href="services.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">Services</a>
+                </li>
+                <li style="position: relative;">
+                    <a href="blog.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">Blog</a>
+                </li>
+                <li style="position: relative;">
+                    <a href="contact.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">Contact</a>
+                </li>
+                <li class="dropdown" style="position: relative;">
+                    <a href="#" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">More</a>
+                    <div style="display: none; position: absolute; top: 100%; left: 0; background-color: #333; min-width: 160px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); z-index: 10;">
+                        <a href="#" style="color: white; padding: 12px 16px; text-decoration: none; display: block; font-size: 1rem; transition: background-color 0.3s ease;">FAQ</a>
+                        <a href="#" style="color: white; padding: 12px 16px; text-decoration: none; display: block; font-size: 1rem; transition: background-color 0.3s ease;">Privacy Policy</a>
+                        <a href="#" style="color: white; padding: 12px 16px; text-decoration: none; display: block; font-size: 1rem; transition: background-color 0.3s ease;">Terms of Service</a>
+                    </div>
+                </li>
+            </ul>
+            <div style="display: flex; align-items: center; background-color: #444; padding: 5px 15px; border-radius: 25px;">
+                <input type="text" placeholder="Search..." style="background: none; border: none; color: white; font-size: 1rem; outline: none; padding: 8px 12px; border-radius: 20px; width: 200px; transition: width 0.3s ease;">
+            </div>
+        </nav>
+    </header>
+
+    <section class="header-section">
+        <h1>About VTS</h1>
+        <p>Innovating the Future of Software Solutions</p>
+    </section>
+
+    <section class="about-container">
+        <img src="https://i.pinimg.com/736x/e1/11/ee/e111ee17d53276c0bacd5fb7e667e653.jpg" alt="VTS Office">
+        <p>Founded in 2020, VTS is a leading software company dedicated to providing innovative solutions for businesses worldwide. Our team of experts is passionate about technology and committed to delivering excellence in every project. From custom software development to advanced AI-driven applications, VTS transforms ideas into reality, ensuring our clients stay ahead in a rapidly evolving digital landscape.</p>
+    </section>
+
+    <section class="values-section" style="padding: 40px; background-color: #fff; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h2 style="font-size: 2rem; color: #333; margin-bottom: 20px; text-align: center;">Our Core Values</h2>
+        <ul style="list-style: none; padding: 0;">
+            <li style="font-size: 1.2rem; color: #333; margin-bottom: 15px; padding: 15px; background-color: #f8f9fa; border-radius: 10px; transition: background 0.5s ease, transform 0.3s ease;" 
+                onmouseover="this.style.background='linear-gradient(to right, #f0a500, #ffcc66)'; this.style.transform='translateX(10px)';" 
+                onmouseout="this.style.background='#f8f9fa'; this.style.transform='translateX(0)';">
+                Innovation: Continuously pushing the boundaries of technology.
+            </li>
+            <li style="font-size: 1.2rem; color: #333; margin-bottom: 15px; padding: 15px; background-color: #f8f9fa; border-radius: 10px; transition: background 0.5s ease, transform 0.3s ease;" 
+                onmouseover="this.style.background='linear-gradient(to right, #f0a500, #ffcc66)'; this.style.transform='translateX(10px)';" 
+                onmouseout="this.style.background='#f8f9fa'; this.style.transform='translateX(0)';">
+                Integrity: Upholding the highest standards of honesty and transparency.
+            </li>
+            <li style="font-size: 1.2rem; color: #333; margin-bottom: 15px; padding: 15px; background-color: #f8f9fa; border-radius: 10px; transition: background 0.5s ease, transform 0.3s ease;" 
+                onmouseover="this.style.background='linear-gradient(to right, #f0a500, #ffcc66)'; this.style.transform='translateX(10px)';" 
+                onmouseout="this.style.background='#f8f9fa'; this.style.transform='translateX(0)';">
+                Customer-Centric: Putting our clients' needs at the heart of everything we do.
+            </li>
+            <li style="font-size: 1.2rem; color: #333; margin-bottom: 15px; padding: 15px; background-color: #f8f9fa; border-radius: 10px; transition: background 0.5s ease, transform 0.3s ease;" 
+                onmouseover="this.style.background='linear-gradient(to right, #f0a500, #ffcc66)'; this.style.transform='translateX(10px)';" 
+                onmouseout="this.style.background='#f8f9fa'; this.style.transform='translateX(0)';">
+                Excellence: Striving for perfection in every project.
+            </li>
+        </ul>
+    </section>
+    
+
+    <section class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-member">
+            <img src="https://imgs.search.brave.com/pvbL-M7Q-t5UbaWXUNamE8qek-qLLyVfy3MUdoUEP9c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvODQ2/MjM4NzkvcGhvdG8v/cG9ydHJhaXQtb2Yt/YS15b3VuZy1zbWls/aW5nLWJpbGwtZ2F0/ZXMtY28tZm91bmRl/ci1vZi10aGUtc29m/dHdhcmUtY29tcGFu/eS1taWNyb3NvZnQt/d2hpbGUtaW4uanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPV9C/YnVUMXpGSnBqVUhj/Q3lZSHlmUDQzWWRI/Q0tnNWtPMnc0bW1X/NXlTVXc9" alt="Team Member 1">
+            <div>
+                <strong>Jane Doe</strong><br>
+                CEO & Founder<br>
+                "Leading VTS with a vision for a smarter digital future."
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="https://imgs.search.brave.com/inst5FNmZZiznaMPTnYR_QHNPtPnnMG1Zo7lkJWJGbE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdj/ZG4uc3RhYmxlZGlm/ZnVzaW9ud2ViLmNv/bS8yMDI0LzExLzE2/L2FjZjFmMjQzLTAx/ZWYtNDBiNi04MTc5/LTQyZTczNDY1MzZm/Zi5qcGc" alt="Team Member 2">
+            <div>
+                <strong>John Smith</strong><br>
+                Chief Technology Officer<br>
+                "Innovating solutions that drive business growth."
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Email: find.your.solution@vts.com</p>
+        <p>Phone: +1 (234) 567-8901</p>
+        <p>Address: 1234 Innovation Drive, Tech City, USA</p>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 VTS. All rights reserved.</p>
+    </footer>
+</body>
+</html>

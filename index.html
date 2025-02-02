@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A responsive multi-page website">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Responsive">
+    <title>VTS one place for everything</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url();
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            background: #333;
+            color: white;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Dropdown styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #575757;
+        }
+
+        /* Search bar */
+        .search-bar input {
+            padding: 8px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background: url() no-repeat center center/cover;
+            color: white;
+        }
+        .service-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 100px 50px;
+            padding: 100px 50px;
+        }
+
+        .container .card {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 350px;
+            max-width: 100%;
+            height: 300px;
+            background: #FFF;
+            border-radius: 20px;
+            transition: 0.5s;
+            box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+        }
+
+        .container .card:hover {
+            height: 300px;
+        }
+
+        .container .card .img-box {
+            position: absolute;
+            top: 20px;
+            width: 300px;
+            height: 220px;
+            background: #333;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .container .card:hover .img-box {
+            top: -100px;
+            scale: 0.75;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+        }
+
+        .container .card .img-box img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .container .card .content {
+            position: absolute;
+            top: 252px;
+            width: 100%;
+            height: 25px;
+            padding: 0 30px;
+            text-align: center;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .container .card:hover .content {
+            top: 130px;
+            height: 260px;
+        }
+
+        .container .card .content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--clr);
+        }
+
+        .container .card .content p {
+            color: #333;
+        }
+
+        .container .card .content a {
+            position: relative;
+            top: 15px;
+            display: inline-block;
+            padding: 12px 25px;
+            text-decoration: none;
+            background: var(--clr);
+            color: #FFF;
+            font-weight: 500;
+        }
+
+        .container .card .content a:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 480px) {
+            .container .card {
+                width: 230px;
+                border-radius: 15px;
+            }
+
+            .container .card .img-box {
+                width: 185px;
+                border-radius: 10px;
+            }
+
+            .container .card .content p {
+                font-size: 0.8rem;
+            }
+
+            .container .card .content a {
+                font-size: 0.9rem;
+            }
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+        }
+        .services-title {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #333;
+        text-align: center;
+        margin-top: 50px;
+        position: relative;
+    }
+
+    .services-title::after {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 3px;
+        background-color: #009688;
+        left: 50%;
+        bottom: -10px;
+        transform: translateX(-50%);
+    }
+    section.services {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+    }
+    .hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensure it's behind the content */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1; /* Make sure content is on top of the video */
+    color: white;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+    opacity: 0.8;
+    animation: fadeInUp 2s ease-out;
+}
+
+.hero .btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    background-color: #009688;
+    color: white;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #00796b;
+    transform: translateY(-5px);
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header style="position: fixed; top: 0; left: 0; width: 100%; padding: 15px 40px; background-color: #333; z-index: 1000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.3s ease;">
+        <nav style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="color: #fff; font-size: 2rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">
+                VTS
+            </div>
+            <ul style="list-style: none; display: flex; gap: 20px;">
+                <li style="position: relative;">
+                    <a href="index.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">Home</a>
+                </li>
+                <li style="position: relative;">
+                    <a href="about.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">About</a>
+                </li>
+                <li style="position: relative;">
+                    <a href="services.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">Services</a>
+                </li>
+                <li style="position: relative;">
+                    <a href="blog.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">Blog</a>
+                </li>
+                <li style="position: relative;">
+                    <a href="contact.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">Contact</a>
+                </li>
+                <li class="dropdown" style="position: relative;">
+                    <a href="#" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">More</a>
+                    <div style="display: none; position: absolute; top: 100%; left: 0; background-color: #333; min-width: 160px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); z-index: 10;">
+                        <a href="#" style="color: white; padding: 12px 16px; text-decoration: none; display: block; font-size: 1rem; transition: background-color 0.3s ease;">FAQ</a>
+                        <a href="#" style="color: white; padding: 12px 16px; text-decoration: none; display: block; font-size: 1rem; transition: background-color 0.3s ease;">Privacy Policy</a>
+                        <a href="#" style="color: white; padding: 12px 16px; text-decoration: none; display: block; font-size: 1rem; transition: background-color 0.3s ease;">Terms of Service</a>
+                    </div>
+                </li>
+            </ul>
+            <div style="display: flex; align-items: center; background-color: #444; padding: 5px 15px; border-radius: 25px;">
+                <input type="text" placeholder="Search..." style="background: none; border: none; color: white; font-size: 1rem; outline: none; padding: 8px 12px; border-radius: 20px; width: 200px; transition: width 0.3s ease;">
+            </div>
+        </nav>
+    </header>
+    
+    <script>
+        // Adding the scroll effect for changing the navbar background color
+        window.onscroll = function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').style.backgroundColor = '#222';
+            } else {
+                document.querySelector('.navbar').style.backgroundColor = '#333';
+            }
+        };
+    
+        // Dropdown hover effect
+        const dropdown = document.querySelector('.dropdown');
+        const dropdownContent = dropdown.querySelector('div');
+        dropdown.addEventListener('mouseover', () => {
+            dropdownContent.style.display = 'block';
+        });
+        dropdown.addEventListener('mouseout', () => {
+            dropdownContent.style.display = 'none';
+        });
+    </script>
+      
+    
+    <section class="hero">
+        <video autoplay muted loop id="background-video">
+            <source src="images/vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1 style="color: #222;">Welcome to Our Website</h1>
+            <p style="color: #333;">Your one-stop solution for all services</p>
+            <a href="services.html" class="btn" style="color: #333;">Get Started</a>
+        </div>
+    </section>
+    
+    
+    <section class="services" id="services">
+        <h2 class="services-title">Our Services</h2>
+    <div class="container">
+        <div class="card" style="--clr: #009688">
+            <div class="img-box">
+                <img src="https://imgs.search.brave.com/TK1SWjFPs7LKQ1T-yKYbwLC73o9CQ8gUjqEvy4Zo5hw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTIx/OTg1NDIyMS9waG90/by93ZWItZGVzaWdu/LWRldmVsb3BtZW50/LWFuZC1jb2Rpbmct/Y29uY2VwdC5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9RnFT/amRSaDZzdWJMX1VN/U3B1WHhlUnB2a3Qx/a3J4VWl5Q1FaMXdz/N3JPaz0">
+            </div>
+            <div class="content">
+                <h2>Web Development</h2>
+                <p>
+                    Our company provides web development services that include designing, building, 
+                    and maintaining websites and web applications. We are using technologies like 
+                    HTML, CSS, JavaScript, and various frameworks. 
+                </p>
+                <a href="">Read More</a>
+            </div>
+        </div>
+        <div class="card" style="--clr: #FF3E7F">
+            <div class="img-box">
+                <img src="https://imgs.search.brave.com/v1Lf0joahQxK8O2iHPb7uvXAsEDpM_zzndpTS7pF75g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA0Lzc4LzA4LzMx/LzM2MF9GXzQ3ODA4/MzE4M182Q1FaS2Fp/TUw0bHlUQktPeDQ1/MEtDUmtVMGFFeGtW/SC5qcGc">
+            </div>
+            <div class="content">
+                <h2>App Development</h2>
+                <p>
+                    Our app development team specializes in creating user-friendly, 
+                    intuitive, and high-performing mobile applications for both 
+                    Android and iOS platforms. 
+                </p>
+                <a href="">Read More</a>
+            </div>
+        </div>
+        <div class="card" style="--clr: #F5A623">
+            <div class="img-box">
+                <img src="https://imgs.search.brave.com/9mvqXYK-IIxVtsU6eM6FRulMGWmhjE44A4oSNn9Nqlo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/YmluYXJ5Zm9sa3Mu/Y29tL21lZGlhL2Js/b2cvQ2xvdWQlMjBB/cHBsaWNhdGlvbiUy/MERldmVsb3BtZW50/L1N0b3JlX2FfbG90/X29mX3Byb2dyYW1t/aW5nX2RhdGFfb25f/Y2xvdWRfc2VydmVy/LnBuZy5wYWdlc3Bl/ZWQuY2UuRHFSV0E4/bl9ady5wbmc">
+            </div>
+            <div class="content">
+                <h2>Cloud Services</h2>
+                <p>
+                    We offer cloud services to businesses, from cloud hosting
+                     to serverless computing and data storage, enabling your 
+                     applications to scale seamlessly and efficiently.
+                </p>
+                <a href="">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
+<footer style="background-color: #333; color: white; text-align: center; padding: 20px 0; position: relative; bottom: 0; width: 100%; box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 1rem; margin: 0;">&copy; 2025 VTS. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

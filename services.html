@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(45deg, #333, #555);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #f0a500;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .blog-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        body,html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Slabo 27px', serif;
+    font-size: 16px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    padding: 0;
+    margin: 0;
+}
+ul,li,p {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+.wrapper {
+    height: 100%;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+.wrapper .container {
+    height: 100%;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.slideshow {
+    height: 100%;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+.slideshow .slideshow-left {
+    width: 40%;
+    float: left;
+    position: relative;
+    height: 100%;
+}
+.slideshow .slideshow-left .Lslide {
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
+}  
+.slideshow .Lslide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+.slideshow .Lslide-content h2 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 0.8;
+}
+.slideshow .Lslide-content p {
+    color: #fff;
+    padding: 2.5em 0em;
+}
+.slideshow .Lslide-content .button {
+    background-color: #fff;
+    display: inline-block;
+    border-radius: 25px;
+    position: relative;
+}
+.slideshow .Lslide-content .button i {
+    float: right;
+    position: absolute;
+    top: 50%;
+    right: 2.5em;
+    color: #000;
+    font-size: 9px;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transition: all 0.3s;
+}
+.slideshow .Lslide-content .button:hover i {
+    right: 1.7em;
+}
+.slideshow .Lslide-content .button p {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    text-align: left;
+    padding: 0.8em 8em 0.8em 1.5em;
+    font-size: 12px;
+    font-weight: 600;
+}
+.slideshow .slideshow-right {
+    width: 60%;
+    float: left;
+    position: relative;
+    height: 100%;    
+}     
+.slideshow .slideshow-right .Rslide {
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
+}  
+.slideshow .slideshow-right .Rslide img {
+    min-width: 100%;
+}     
+    </style>
+</head>
+<body>
+    <header style="position: fixed; top: 0; left: 0; width: 100%; padding: 15px 40px; background-color: #333; z-index: 1000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.3s ease;">
+        <nav style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="color: #fff; font-size: 2rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease;">
+                VTS
+            </div>
+            <ul style="list-style: none; display: flex; gap: 20px;">
+                <li style="position: relative;">
+                    <a href="index.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">Home</a>
+                </li>
+                <li style="position: relative;">
+                    <a href="about.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">About</a>
+                </li>
+                <li style="position: relative;">
+                    <a href="services.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">Services</a>
+                </li>
+                <li style="position: relative;">
+                    <a href="blog.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">Blog</a>
+                </li>
+                <li style="position: relative;">
+                    <a href="contact.html" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">Contact</a>
+                </li>
+                <li class="dropdown" style="position: relative;">
+                    <a href="#" style="color: white; font-size: 1.1rem; text-decoration: none; transition: color 0.3s ease, transform 0.3s ease;">More</a>
+                    <div style="display: none; position: absolute; top: 100%; left: 0; background-color: #333; min-width: 160px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); z-index: 10;">
+                        <a href="#" style="color: white; padding: 12px 16px; text-decoration: none; display: block; font-size: 1rem; transition: background-color 0.3s ease;">FAQ</a>
+                        <a href="#" style="color: white; padding: 12px 16px; text-decoration: none; display: block; font-size: 1rem; transition: background-color 0.3s ease;">Privacy Policy</a>
+                        <a href="#" style="color: white; padding: 12px 16px; text-decoration: none; display: block; font-size: 1rem; transition: background-color 0.3s ease;">Terms of Service</a>
+                    </div>
+                </li>
+            </ul>
+            <div style="display: flex; align-items: center; background-color: #444; padding: 5px 15px; border-radius: 25px;">
+                <input type="text" placeholder="Search..." style="background: none; border: none; color: white; font-size: 1rem; outline: none; padding: 8px 12px; border-radius: 20px; width: 200px; transition: width 0.3s ease;">
+            </div>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <div class="container">
+            <div class="slideshow">
+                 <div class="slideshow-left">
+                     <div class="Lslide">
+                         <div class="Lslide-content">
+                             <h2>Web Development</h2>
+                             <p>Our company provides web development services that include designing, building,
+                                and maintaining websites and web applications. We are using technologies like 
+                                HTML, CSS, JavaScript, and various frameworks.</p>
+
+                             <div class="button">
+                                 <a href="#">
+                                     <p>More</p>
+                                     <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                 </a>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="Lslide">
+                         <div class="Lslide-content">
+                             <h2>App Development</h2>
+                             <p>Our app development team specializes in creating user-friendly, 
+                                intuitive, and high-performing mobile applications for both
+                                Android and iOS platforms. </p>
+
+                             <div class="button">
+                                 <a href="#">
+                                     <p>More</p>
+                                     <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                 </a>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="Lslide">
+                         <div class="Lslide-content">
+                             <h2>Cloud Services</h2>
+                             <p>We offer cloud services to businesses, from cloud hosting
+                            to serverless computing and data storage, enabling your 
+                            applications to scale seamlessly and efficiently.</p>
+
+                             <div class="button">
+                                 <a href="#">
+                                     <p>More</p>
+                                     <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                 </a>
+                             </div>
+                         </div>
+                     </div>    
+                 </div>
+                 <div class="slideshow-right">
+                     <div class="Rslide">
+                         <img src="https://mariongrandvincent.github.io/HTML-Personal-website/img-codePen/flower-3.jpg" alt="">
+                     </div>
+                     <div class="Rslide">
+                         <img src="https://mariongrandvincent.github.io/HTML-Personal-website/img-codePen/flower-5.jpg" alt="">
+                     </div>     
+                     <div class="Rslide">
+                         <img src="https://mariongrandvincent.github.io/HTML-Personal-website/img-codePen/flower-1.jpg" alt="">
+                     </div>                                              
+                 </div>   
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var Lslide      = document.querySelectorAll('.Lslide'),
+        Rslide      = document.querySelectorAll('.Rslide'),
+        control     = document.querySelectorAll('.oncontrol'),
+        slideHeight = document.querySelector('.wrapper').clientHeight,
+        color = ['#fdc97c', '#e5d3d0', '#71b3d6'],
+        index = 0;
+    
+    
+    function init() {
+        slideHeight = document.querySelector('.wrapper').clientHeight;
+        for (i = 0; i < Lslide.length; i++) {
+            Lslide[i].style.backgroundColor = color[i];
+            Lslide[i].style.top = -slideHeight * i + "px";
+            Rslide[i].style.top = slideHeight * i + "px";
+        }  
+    }
+    init()
+    window.addEventListener('resize', function(){
+        init()
+    });
+    
+    function moveToTop() {
+    
+        index++;
+        for (el = 0; el < Lslide.length; el++) {
+            Lslide[el].style.top = parseInt(Lslide[el].style.top) + slideHeight + "px";
+            Rslide[el].style.top = parseInt(Rslide[el].style.top) - slideHeight + "px";
+        }
+    
+        if (index > Lslide.length-1) {
+            index = 0;
+            for (el = 0; el < Lslide.length; el++) {
+                Lslide[el].style.top = -slideHeight * el + "px";
+                Rslide[el].style.top = slideHeight * el + "px";
+            }
+        }
+    }
+    
+    function moveToBottom() {
+        index--;
+        for (el = 0; el < Lslide.length; el++) {
+            Lslide[el].style.top = parseInt(Lslide[el].style.top) - slideHeight + "px";
+            Rslide[el].style.top = parseInt(Rslide[el].style.top) + slideHeight + "px";
+            
+        }
+        if (index < 0) {
+            index = Rslide.length-1;
+            for (el = 0; el < Lslide.length; el++) {
+                Lslide[el].style.top = parseInt(Lslide[el].style.top) + slideHeight * Lslide.length + "px";
+                Rslide[el].style.top = parseInt(Rslide[el].style.top) - slideHeight * Rslide.length + "px";
+            }
+        }
+    }
+    
+    function transition() {
+        for (t = 0; t < Lslide.length; t++) {
+            Lslide[t].style.transition = "all 0.8s";
+            Rslide[t].style.transition = "all 0.8s";
+        }
+    }
+      
+    
+    for (t = 0; t < control.length; t++) {
+        control[t].addEventListener("click", function() {
+    
+            if (this.classList.contains('control-top')) {
+                moveToTop()
+            } 
+            if (this.classList.contains('control-bottom')) {
+                moveToBottom()
+            }
+    
+            transition()
+       
+        });
+    }
+    
+    var wheeling;
+    function mousemouve(e) {
+    
+        clearTimeout(wheeling);
+        e.preventDefault();
+        var e = window.event || e; 
+        var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+        
+        wheeling = setTimeout(function() {
+            wheeling = undefined;
+            if (delta === 1) {
+                moveToTop()
+            }
+            if (delta === -1) {
+                moveToBottom()
+            }
+        }, 100);
+    
+        transition()
+    }
+    
+    document.addEventListener("mousewheel", mousemouve);
+    document.addEventListener("DOMMouseScroll", mousemouve);</script>
+</body>
+</html>
